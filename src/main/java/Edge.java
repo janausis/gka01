@@ -1,0 +1,1 @@
+public record Edge(Node from, Node to, String name, int weight, boolean directed) {}
