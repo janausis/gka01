@@ -7,13 +7,6 @@ public class GkaParser {
   private static final Pattern edgePattern = Pattern.compile(
       "(\\w+)\\s*(->|--)\\s*(\\w+)(?:\\s*\\((\\w+)\\))?(?::\\s*(\\d+))?;");
 
-  public static boolean isDirected(List<String> lines) {
-    for (String line : lines) {
-      if (line.contains("->")) return true;
-    }
-    return false;
-  }
-
   public static List<Node> parseNodes(List<String> lines) {
     Set<Node> nodes = new HashSet<>();
     for (String line : lines) {
